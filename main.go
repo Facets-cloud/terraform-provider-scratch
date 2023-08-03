@@ -11,13 +11,13 @@ import (
 
 var (
 	// Example version string that can be overwritten by a release process
-	version string = "dev"
+	version string = "0.4.0"
 	commit  string = ""
 )
 
 func main() {
 	opts := providerserver.ServeOpts{
-		Address: "registry.terraform.io/brendanthompson/scratch",
+		Address: "registry.terraform.io/hashicorp/scratch",
 	}
 
 	err := providerserver.Serve(context.Background(), scratch.New(version), opts)
